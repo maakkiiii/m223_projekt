@@ -20,4 +20,8 @@ public class BookingService {
     public List<Booking> findAll(){
         return bookingRepository.findAll();
     }
+
+    public void deleteAll(){
+        bookingRepository.deleteAll();
+    }
 }
