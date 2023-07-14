@@ -25,6 +25,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User getUserById(User user){
+        return userRepository.saveAndFlush(user);
+    }
+
     public void deleteUser(int userId) {
         userRepository.deleteById(userId);
     }

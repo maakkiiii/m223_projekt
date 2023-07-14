@@ -22,10 +22,22 @@ public class BookingController {
         return bookingService.findAll();
     }
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Booking getBookingById(@PathVariable int id) {
+        return bookingService.getBookingById(id);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Booking createBooking(@RequestBody Booking booking){
         return bookingService.createBooking(booking);
+    }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Booking updateBooking(@RequestBody Booking booking){
+        return bookingService.updateBooking(booking);
     }
 
     @DeleteMapping("/{id}")

@@ -29,6 +29,12 @@ public class UserController {
         return userService.createUser(user);
     }
 
+    @PostMapping
+    @ResponseStatus(HttpStatus.OK)
+    public User getUserById (@PathVariable User user){
+       return userService.getUserById(user);
+    }
+
     @DeleteMapping("/id")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteUser(@PathVariable int id){
