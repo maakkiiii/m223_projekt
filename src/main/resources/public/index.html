@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Client-Server Application</title>
+    <title>Coworking Space - Buchungen</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Ja es startet, super machsch das.</h1>
+    <h1>Coworking Space - Buchungen</h1>
+    <form id="booking-form">
+        <label for="date">Datum:</label>
+        <input type="date" id="date" required>
+
+        <label for="duration">Dauer (in Stunden):</label>
+        <input type="number" id="duration" required>
+
+        <button type="submit">Buchung anfragen</button>
+    </form>
+
+    <div class="booking-status" id="booking-status"></div>
+
+    <script>
+        // JavaScript-Code zum Absenden der Buchungsanfrage und Anzeigen des Buchungsstatus
+        const bookingForm = document.getElementById('booking-form');
+        const bookingStatus = document.getElementById('booking-status');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const date = document.getElementById('date').value;
+            const duration = document.getElementById('duration').value;
+
+            // Hier AJAX-Anfrage an die entsprechende API-URL senden (z.B. mit fetch())
+
+            // Beispielhafte Antwort vom Server
+            const bookingStatusText = 'Ihre Buchungsanfrage wurde eingereicht und wartet auf Bestätigung.';
+            bookingStatus.innerText = bookingStatusText;
+        });
+    </script>
 </body>
 </html>
