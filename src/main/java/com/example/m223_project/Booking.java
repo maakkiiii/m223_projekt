@@ -36,4 +36,60 @@ public class Booking {
         this.startTime = startTime;
         this.endTime = endTime;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public boolean isMorning() {
+        return morning;
+    }
+
+    public void setMorning(boolean morning) {
+        this.morning = morning;
+    }
+
+    public boolean isAfternoon() {
+        return afternoon;
+    }
+
+    public void setAfternoon(boolean afternoon) {
+        this.afternoon = afternoon;
+    }
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

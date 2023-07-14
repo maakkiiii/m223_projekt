@@ -17,7 +17,17 @@ public class UserService {
         return userRepository.saveAndFlush(user);
     }
 
+    public User loginUser(String email, String password){
+        return userRepository.findEmailAndPassword(email, password);
+    }
+
     public List<User> findAll(){
         return userRepository.findAll();
     }
+
+    public void deleteUser(int userId) {
+        userRepository.deleteById(userId);
+    }
+
+
 }

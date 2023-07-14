@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/users")
 public class UserController {
     public UserService userService;
 
@@ -28,5 +28,12 @@ public class UserController {
     public User createUser(@RequestBody User user){
         return userService.createUser(user);
     }
+
+    @DeleteMapping("/id")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteUser(@PathVariable int id){
+        userService.deleteUser(id);
+    }
+
 
 }

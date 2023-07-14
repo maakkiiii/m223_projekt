@@ -21,6 +21,10 @@ public class BookingService {
         return bookingRepository.findAll();
     }
 
+    public void deleteBooking(int bookingId) {
+        bookingRepository.deleteById(bookingId);
+    }
+
     public void deleteAll(){
         bookingRepository.deleteAll();
     }

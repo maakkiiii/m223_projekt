@@ -27,4 +27,11 @@ public class BookingController {
     public Booking createBooking(@RequestBody Booking booking){
         return bookingService.createBooking(booking);
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteBooking(@PathVariable int id) {
+        bookingService.deleteBooking(id);
+    }
+
 }
